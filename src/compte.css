@@ -1,0 +1,82 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #084d70;
+    background-color: #e3ebf3; /* Light background for content */
+    padding-left: 250px; /* Make space for sidebar */
+    box-sizing: border-box; /* Include padding in total width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+@media (max-width: 768px) {
+    #container {
+        padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+#header, #footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+#mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #eef4fa;
+    overflow-x: auto; /* Allow horizontal scrolling for content if needed */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(37, 92, 238, 0.2);
+    table-layout: fixed; /* Fix table layout to prevent content from expanding */
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate text if it overflows */
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    color: #084d70;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}

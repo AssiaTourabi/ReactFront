@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+//import Login from './login';
+import ExamManagementComponent from './ExamManagement';
+import Sidebar from './Sidebar';
+import Header from './header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Comptes from './Comptes';
+import Medecin from './medecin';
+//import { Modal, Button } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+                <Header />
+                <Sidebar />  
+      <div > 
+        <Routes>
+          <Route path="/" element={<ExamManagementComponent />} />
+          <Route path="/Sidebar" element={<Sidebar/>} />
+          <Route path="/header" element={<Header/>} />
+          <Route path="/Comptes" element={<Comptes />} />
+          <Route path="/medecin" element={<Medecin />} />
+
+        </Routes>
+      </div>
+      </div>
+    </Router>
   );
 }
 
