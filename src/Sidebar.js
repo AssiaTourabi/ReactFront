@@ -21,9 +21,9 @@ const Sidebar = () => {
                     <NavDropdown.Item as={Link} to="/statistiques-crs">Statistiques</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Paramétrage" id="parametrage-dropdown">
-                    <NavDropdown.Item as={Link} to="/examens">Examens</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/">Examens</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/organismes">Organismes</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/medecins">Médecins</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/medecin">Médecins</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/organes">Organes</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/lesions">Lesions</NavDropdown.Item>
                 </NavDropdown>

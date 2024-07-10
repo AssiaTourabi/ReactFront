@@ -26,13 +26,15 @@ const ExamManagementComponent = () => {
     };
 
     const handleSearch = () => {
-        const filtered = mockExams.filter(exam => 
-            exam.code.toLowerCase().includes(searchCode.toLowerCase()) || 
-            exam.designation.toLowerCase().includes(searchDesignation.toLowerCase())
-        );
+        const filtered = mockExams.filter(exam => {
+            const codeMatch = searchCode ? exam.code.toLowerCase().includes(searchCode.toLowerCase()) : true;
+            const designationMatch = searchDesignation ? exam.designation.toLowerCase().includes(searchDesignation.toLowerCase()) : true;
+            return codeMatch && designationMatch;
+        });
         setFilteredExams(filtered);
         handleCloseModal();
     };
+    
 
     
 
